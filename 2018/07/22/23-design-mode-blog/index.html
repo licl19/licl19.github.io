@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="半盏流年&#39;s blog">
 <meta property="og:description" content="blog终于落成，心心念念的事情可以放下了，从此分享转移地址了">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-21T18:06:59.243Z">
+<meta property="og:updated_time" content="2018-07-21T18:13:43.931Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="23种设计模式">
 <meta name="twitter:description" content="blog终于落成，心心念念的事情可以放下了，从此分享转移地址了">
@@ -228,7 +228,9 @@
           
           <!-- 目录内容结束 -->
       
-        <p>一.单例模式（Singleton Pattern）<br>定义：Ensure a class has only one instance, and provide a global point of access to it.（确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例。）</p>
+        <p>一.单例模式（Singleton Pattern）<br>二.工厂模式<br>三.抽象工厂模式（Abstract Factory Pattern）<br>四.模板方法模式（Template Method Pattern）<br>五.建造者模式（Builder Pattern）<br>六.代理模式（Proxy Pattern）<br>七.原型模式（Prototype Pattern）<br>八.中介者模式<br>九.命令模式<br>十.责任链模式<br>十一.装饰模式（Decorator Pattern）<br>十二.策略模式（Strategy Pattern）<br>十三.适配器模式（Adapter Pattern）<br>十四.迭代器模式（Iterator Pattern）<br>十五.组合模式 (Composite Pattern)<br>十六.观察者模式（Observer Pattern）<br>十七.门面模式（Facade Pattern）<br>十八.备忘录模式（Memento Pattern）<br>十九.访问者模式（Visitor Pattern）<br>二十.状态模式<br>二十一.解释器模式（Interpreter Pattern）<br>二十二.享元模式（Flyweight Pattern）<br>二十三.桥梁模式（Bridge Pattern）</p>
+<a id="more"></a>
+<p>一.单例模式（Singleton Pattern）<br>定义：Ensure a class has only one instance, and provide a global point of access to it.（确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例。）</p>
 <p>使用场景：<br>要求生成唯一序列号的环境；<br>在整个项目中需要一个共享访问点或共享数据，例如一个Web页面上的计数器，可以不用把每次刷新都记录到数据库中，使用单例模式保持计数器的值，并确保是线程安全的；<br>创建一个对象需要消耗的资源过多，如要访问IO和数据库等资源；<br>需要定义大量的静态常量和静态方法（如工具类）的环境，可以采用单例模式（当然，也可以直接声明为static的方式）。</p>
 <p>二.工厂模式<br>定义：Define an interface for creating an object,but let subclasses decide which class to instantiate.Factory Method lets a class defer instantiation to subclasses.（定义一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类。）</p>
 <p>Product为抽象产品类负责定义产品的共性，实现对事物最抽象的定义；<br>Creator为抽象创建类，也就是抽象工厂，具体如何创建产品类是由具体的实现工厂ConcreteCreator完成的。</p>
@@ -273,7 +275,7 @@
 <p>对象适配器和类适配器的区别：<br>类适配器是类间继承，对象适配器是对象的合成关系，也可以说是类的关联关系，这是两者的根本区别。（实际项目中对象适配器使用到的场景相对比较多）。</p>
 <p>十四.迭代器模式（Iterator Pattern）<br>定义：Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.（它提供一种方法访问一个容器对象中各个元素，而又不需暴露该对象的内部细节。）</p>
 <p>Iterator抽象迭代器<br>抽象迭代器负责定义访问和遍历元素的接口，而且基本上是有固定的3个方法：first()获得第一个元素，next()访问下一个元素，isDone()是否已经访问到底部（Java叫做hasNext()方法）。<br>ConcreteIterator具体迭代器<br>具体迭代器角色要实现迭代器接口，完成容器元素的遍历。<br>Aggregate抽象容器<br>容器角色负责提供创建具体迭代器角色的接口，必然提供一个类似createIterator()这样的方法，在Java中一般是iterator()方法。<br>Concrete Aggregate具体容器<br>具体容器实现容器接口定义的方法，创建出容纳迭代器的对象。<br>ps：迭代器模式已经被淘汰，java中已经把迭代器运用到各个聚集类（collection）中了，使用java自带的迭代器就已经满足我们的需求了。</p>
-<p>十五.组合模式（(Composite Pattern)）<br>定义：Compose objects into tree structures to represent part-whole hierarchies.Composite lets clients treat individual objects and compositions of objects uniformly.（将对象组合成树形结构以表示“部分-整体”的层次结构，使得用户对单个对象和组合对象的使用具有一致性。）</p>
+<p>十五.组合模式（Composite Pattern)<br>定义：Compose objects into tree structures to represent part-whole hierarchies.Composite lets clients treat individual objects and compositions of objects uniformly.（将对象组合成树形结构以表示“部分-整体”的层次结构，使得用户对单个对象和组合对象的使用具有一致性。）</p>
 <p>Component抽象构件角色<br>定义参加组合对象的共有方法和属性，可以定义一些默认的行为或属性，比如我们例子中的getInfo就封装到了抽象类中。<br>Leaf叶子构件<br>叶子对象，其下再也没有其他的分支，也就是遍历的最小单位。<br>Composite树枝构件<br>树枝对象，它的作用是组合树枝节点和叶子节点形成一个树形结构。</p>
 <p>使用场景：<br>维护和展示部分-整体关系的场景，如树形菜单、文件和文件夹管理。<br>从一个整体中能够独立出部分模块或功能的场景。<br>注意：<br>只要是树形结构，就考虑使用组合模式。</p>
 <p>十六.观察者模式（Observer Pattern）<br>定义：Define a one-to-many dependency between objects so that when one object changes state,all its dependents are notified and updated automatically.（定义对象间一种一对多的依赖关系，使得每当一个对象改变状态，则所有依赖于它的对象都会得到通知并被自动更新。）</p>
