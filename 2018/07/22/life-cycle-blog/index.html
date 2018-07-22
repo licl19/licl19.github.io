@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/7 | 半盏流年&#39;s blog</title>
+  <title>生命周期 | 半盏流年&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="半盏流年&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2018/07/index.html">
+  <meta name="description" content="一、Application 的生命周期二、UIViewController生命周期">
+<meta name="keywords" content="IOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="生命周期">
+<meta property="og:url" content="http://yoursite.com/2018/07/22/life-cycle-blog/index.html">
 <meta property="og:site_name" content="半盏流年&#39;s blog">
+<meta property="og:description" content="一、Application 的生命周期二、UIViewController生命周期">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-22T01:46:55.334Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="半盏流年&#39;s blog">
+<meta name="twitter:title" content="生命周期">
+<meta name="twitter:description" content="一、Application 的生命周期二、UIViewController生命周期">
   
     <link rel="alternative" href="/atom.xml" title="半盏流年&#39;s blog" type="application/atom+xml">
   
@@ -176,85 +181,143 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-life-cycle-blog" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/22/runtime-blog/" class="archive-article-date">
-  	<time datetime="2018-07-22T02:00:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/22/runtime-blog/">运行时</a>
+    <h1 class="article-title" itemprop="name">
+      生命周期
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">IOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/IOS//" class="article-tag-list-link color4">IOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/22/life-cycle-blog/" class="archive-article-date">
+        
+        <a href="/2018/07/22/life-cycle-blog/" class="archive-article-date">
   	<time datetime="2018-07-22T01:33:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/22/life-cycle-blog/">生命周期</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+       <!-- 目录内容 -->
+       
+           <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+           <span class="btn-bg"></span>
+           <span class="btn-text">文章导航</span>
+           </p>
+           <div id="toc-article" class="toc-article">
+               <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+               <strong class="toc-title">文章目录</strong>
+               
+           </div>
+           <script type="text/javascript">
+            function showToc(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:block");
+                show_toc_btn.setAttribute("style","display:none");
+                };
+            function showBtn(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:none");
+                show_toc_btn.setAttribute("style","display:block");
+                };
+            </script>
           
+          <!-- 目录内容结束 -->
+      
+        <p>一、Application 的生命周期<br>二、UIViewController生命周期</p>
+<a id="more"></a>
+<p>一、Application 的生命周期</p>
+<ol>
+<li>Application的几种状态</li>
+</ol>
+<p>（1）Not running未运行：程序未启动，或者应用正在运行但是途中被系统停止。<br>（2）Inactive未激活：当前应用正在前台运行，但是并不接收事件。一般每当应用要从一个状态切换到另一个不同的状态时，中途过渡会短暂停留在此状态。此状态停留时间比较长的情况:用户上拉系统设置、者下拉系统状态栏、来电话等。<br>（3）Active激活：程序在前台运行而且接收到了事件。这是应用正在前台运行时所处的正常状态。<br>（4）Backgroud后台：程序在后台而且能执行代码，大多数程序进入这个状态后会在在这个状态上停留一会。时间到之后会进入挂起状态(Suspended)。有的程序经过特殊的请求后可以长期处于Backgroud状态，例如播放器播放音乐等。<br>（5）Suspended挂起：应用处在后台，并且已停止执行代码。系统自动的将应用移入此状态，且在此举之前不会对应用做任何通知。当处在此状态时，应用依然驻留内存但不执行任何程序代码。当系统发生低内存告警时，系统将会将处于Suspended状态的应用清除出内存以为正在前台运行的应用提供足够的内存。</p>
+<ol start="2">
+<li>程序运行状态时代理方法的执行顺序：</li>
+</ol>
+<p>(1). 告诉代理启动过程已经开始,但状态恢复尚未发生</p>
+<ul>
+<li>(BOOL)application:(UIApplication <em>)application willFinishLaunchingWithOptions:(NSDictionary </em>)launchOptions{<br>  return YES;<br>}<br>(2). 告诉代理启动基本完成程序准备开始运行</li>
+<li>(BOOL)application:(UIApplication <em>)application didFinishLaunchingWithOptions:(NSDictionary </em>)launchOptions {<br>  return YES;<br>}<br>(3). 其他应用通过”openURL”的方法打开这个方法所在的app后，这个方法就会被调用（第三方分享的返回、<br>点击widget等）。这里还要说一点的是，app在未启动时，用户点击widget打开app的时候，执行顺<br>序是didFinishLaunchingWithOptions -&gt; application:openURL:options: -&gt; applicationDidBecomeActive</li>
+<li>(BOOL)application:(UIApplication <em>)app openURL:(NSURL </em>)url options:(NSDictionary<nsstring *,id=""> *)options{<br>  return YES;<br>}<br>(4). 应用程序入活动状态执行(app首次启动、从后台打开app都会调用)</nsstring></li>
+<li>(void)applicationDidBecomeActive:(UIApplication *)application {<br>}<br>(5). 应用程序将要进入非活动状态执行，在此期间，应用程序不接收消息或事件（app进入后台、下拉系统状态栏、来电话了等）</li>
+<li>(void)applicationWillResignActive:(UIApplication *)application {<br>}<br>(6). 当程序被推送到后台的时候调用。要设置后台继续运行，则在这个方法里面设置</li>
+<li>(void)applicationDidEnterBackground:(UIApplication *)application {<br>}<br>(7). 当程序从后台将要重新回到前台时候调用，这个刚好跟上面的那个方法相反。</li>
+<li>(void)applicationWillEnterForeground:(UIApplication <em>)application {<br>}<br>(8). 当程序被杀掉将要退出是被调用，通常是用来保存数据和一些退出前的清理工作。但是通常按下home键只是会进入Background，不会调用此方法，可以在Plist中设置 Application does not run in backgroud为YES，这样在点击HOME键时程序就会调用-(void)applicationWillTerminate:(UIApplication </em>)application方法实现直接退出程序，并且可以在添加数据保存或数据删除方法</li>
+<li>(void)applicationWillTerminate:(UIApplication *)application {<br>}<br>// 此方法已经被willFinishLaunchingWithOptions和didFinishLaunchingWithOptions替代，不需要实现</li>
+<li>(void)applicationDidFinishLaunching:(UIApplication *)application{<br>}</li>
+</ul>
+<p>现在启动程序看看执行的顺序：<br>(1). 启动程序<br>①-[AppDelegate application:willFinishLaunchingWithOptions:]<br>②-[AppDelegate application:didFinishLaunchingWithOptions:]<br>③-[AppDelegate applicationDidBecomeActive:]</p>
+<p>(2). 按下home键<br>①-[AppDelegate applicationWillResignActive:]<br>②-[AppDelegate applicationDidEnterBackground:]</p>
+<p>(3). app在后台状态，点击app打开<br>①-[AppDelegate applicationWillEnterForeground:]<br>②-[AppDelegate applicationDidBecomeActive:]</p>
+<p>二、UIViewController生命周期</p>
+<p>ViewController的生命周期中各方法执行流程如下：</p>
+<p>init —&gt;<br>loadView —&gt;<br>viewDidLoad —&gt;<br>viewWillApper —&gt;<br>viewWillLayoutSubviews -&gt;<br>viewDidLayoutSubviews -&gt;<br>viewDidApper —&gt;<br>viewWillDisapper —&gt;<br>viewDidDisapper —&gt;<br>viewWillUnload -&gt;<br>viewDidUnload —&gt;<br>dealloc<br>严格的说，一个ViewController完整的声明周期还应该包括initialize这个方法，下面简单地介绍下这些方法：</p>
+<p>(1). + (void)initialize;</p>
+<p>类的初始化方法。类的初始化方法。initialize方法并不会每次创建对象都调用，只有在这个类第一次创建对象时才会调用，做一些类的准备工作，再次创建这个类的对象，initalize方法将不会被调用，对于这个类的子类，如果实现了initialize方法，在这个子类第一次创建对象时会调用自己的initalize方法，之后不会调用，如果没有实现，那么它的父类将替它再次调用一下自己的initialize方法，以后创建也都不会再调用。因此，如果我们有一些和这个相关的全局变量，可以在这里进行初始化。</p>
+<p>(2). - (instancetype)init 或着 - (instancetype)initWithCoder:(NSCoder *)coder;</p>
+<p>对象初始化方法。init方法和initCoder方法相似，只是被调用的环境不一样，如果用代码进行初始化，会调用init，从nib文件或者归档进行初始化，会调用initCoder。</p>
+<p>(3). - (void)loadView;</p>
+<p>加载视图。loadView方法是开始加载视图的起始方法，除非手动调用，否则在ViewController的生命周期中没特殊情况只会被调用一次。主要是获取self.view时调用，创建self.view。</p>
+<p>(4). - (void)viewDidLoad;</p>
+<p>加载视图。viewDidLoad方法是我们最常用的方法的，类中成员对象和变量的初始化我们都会放在这个方法中，在类创建后，无论视图的展现或消失，这个方法也是只会在将要布局时调用一次。</p>
+<p>(5). - (void)viewWillAppear:(BOOL)animated;</p>
+<p>在view即将添加到视图层级中(显示给用户)且任意显示动画切换之前调用(这个时候supperView还是nil)。这个方法中完成任何与视图显示相关的任务，例如改变视图方向、状态栏方向、视图显示样式等</p>
+<p>(6). - (void)viewWillLayoutSubviews;</p>
+<p>view即将布局其Subviews。比如view的bounds改变了(例如状态栏从不显示到显示，视图方向变化)，要调整Subviews的位置，在调整之前要做的一些工作就可以在该方法中实现。</p>
+<p>(7). - (void)viewDidLayoutSubviews</p>
+<p>view已经布局其Subviews。比如view的bounds改变了(例如状态栏从不显示到显示，视图方向变化)，已经调整Subviews的位置，在调整完成之后要做的一些工作就可以在该方法中实现。</p>
+<p>(8). - (void)viewDidAppear:(BOOL)animated;</p>
+<p>在view被添加到视图层级中，显示动画切换之后调用(这时view已经添加到supperView中)。在这个方法中执行视图显示相关附件任务.</p>
+<p>(9). - (void)viewWillDisappear:(BOOL)animated;</p>
+<p>视图将被从屏幕上移除之前执行。view即将从superView中移除且移除动画切换之前，此时还没有调用removeFromSuperview。</p>
+<p>(10). - (void)viewDidDisappear:(BOOL)animated;</p>
+<p>视图已经被从屏幕上移除，用户看不到这个视图了。view从superView中移除，移除动画切换之后调用，此时已调用removeFromSuperview。</p>
+<p>-(void)viewWillUnload<br>在VC的view对象从内存中释放之前调用，可以在view被释放前做一些资源清理操作。在iOS6.0开始就废弃了，该方法不再会调用<br>-(void)viewDidUnload<br>在VC的view对象从内存中释放之后调用，可以在view被释放后做一些view相关的引用清理操作，此时view为nil。在iOS6.0开始就废弃了，该方法不再会调用</p>
+<p>(11). - (void)dealloc;</p>
+<p>viewController被释放时调用。视图view被销毁，此处需要对你在init和viewDidLoad中创建的对象进行释放(ARC下移除通知等)</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/IMG_6351.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/IMG_6352.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -266,7 +329,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -279,153 +342,142 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/22/life-cycle-blog/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/22/23-design-mode-blog/" class="archive-article-date">
-  	<time datetime="2018-07-21T17:37:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/07/22/runtime-blog/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          运行时
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/22/23-design-mode-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">23种设计模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/22/23-design-mode-blog/">23种设计模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/设计//" class="article-tag-list-link color3">设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/22/six-design-mode-blog/" class="archive-article-date">
-  	<time datetime="2018-07-21T16:17:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/22/six-design-mode-blog/">六大设计原则</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/设计//" class="article-tag-list-link color3">设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/14/my-first-blog/" class="archive-article-date">
-  	<time datetime="2018-07-14T07:01:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/14/my-first-blog/">博客落成</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/心情//" class="article-tag-list-link color3">心情</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2018/07/22/life-cycle-blog/",
+  owner: 'licl19',
+  repo: 'https://github.com/licl19/gitment.git',
+  oauth: {
+    client_id: 'licl19',
+    client_secret: 'licl1994',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -448,8 +500,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
