@@ -9,14 +9,14 @@
   <title>运行时 | 半盏流年&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="简介 Runtime 又叫运行时，是一套底层的 C 语言 API，其为 iOS 内部的核心之一，我们平时编写的 OC 代码，底层都是基于它来实现的。比如： [receiver message];// 底层运行时会被编译器转化为：objc_msgSend(receiver, selector)// 如果其还有参数比如：[receiver message:(id)arg…];// 底层运行时会被编译器">
-<meta name="keywords" content="IOS">
+<meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="运行时">
 <meta property="og:url" content="http://yoursite.com/2018/07/22/runtime-blog/index.html">
 <meta property="og:site_name" content="半盏流年&#39;s blog">
 <meta property="og:description" content="简介 Runtime 又叫运行时，是一套底层的 C 语言 API，其为 iOS 内部的核心之一，我们平时编写的 OC 代码，底层都是基于它来实现的。比如： [receiver message];// 底层运行时会被编译器转化为：objc_msgSend(receiver, selector)// 如果其还有参数比如：[receiver message:(id)arg…];// 底层运行时会被编译器">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-22T02:06:19.860Z">
+<meta property="og:updated_time" content="2018-07-22T02:08:42.264Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="运行时">
 <meta name="twitter:description" content="简介 Runtime 又叫运行时，是一套底层的 C 语言 API，其为 iOS 内部的核心之一，我们平时编写的 OC 代码，底层都是基于它来实现的。比如： [receiver message];// 底层运行时会被编译器转化为：objc_msgSend(receiver, selector)// 如果其还有参数比如：[receiver message:(id)arg…];// 底层运行时会被编译器">
@@ -230,7 +230,9 @@
       
         <p>简介</p>
 <p>Runtime 又叫运行时，是一套底层的 C 语言 API，其为 iOS 内部的核心之一，我们平时编写的 OC 代码，底层都是基于它来实现的。比如：</p>
-<p>[receiver message];<br>// 底层运行时会被编译器转化为：<br>objc_msgSend(receiver, selector)<br>// 如果其还有参数比如：<br>[receiver message:(id)arg…];<br>// 底层运行时会被编译器转化为：<br>objc_msgSend(receiver, selector, arg1, arg2, …)<br>以上你可能看不出它的价值，但是我们需要了解的是 Objective-C 是一门动态语言，它会将一些工作放在代码运行时才处理而并非编译时。也就是说，有很多类和成员变量在我们编译的时是不知道的，而在运行时，我们所编写的代码会转换成完整的确定的代码运行。</p>
+<p>[receiver message];<br>// 底层运行时会被编译器转化为：<br>objc_msgSend(receiver, selector)<br>// 如果其还有参数比如：<br>[receiver message:(id)arg…];<br>// 底层运行时会被编译器转化为：<br>objc_msgSend(receiver, selector, arg1, arg2, …)</p>
+<a id="more"></a>
+<p>以上你可能看不出它的价值，但是我们需要了解的是 Objective-C 是一门动态语言，它会将一些工作放在代码运行时才处理而并非编译时。也就是说，有很多类和成员变量在我们编译的时是不知道的，而在运行时，我们所编写的代码会转换成完整的确定的代码运行。</p>
 <p>因此，编译器是不够的，我们还需要一个运行时系统(Runtime system)来处理编译后的代码。</p>
 <p>Runtime 基本是用 C 和汇编写的，由此可见苹果为了动态系统的高效而做出的努力。苹果和 GNU 各自维护一个开源的 Runtime 版本，这两个版本之间都在努力保持一致。</p>
 <p>Runtime 的作用<br>Objc 在三种层面上与 Runtime 系统进行交互：<br>通过 Objective-C 源代码<br>通过 Foundation 框架的 NSObject 类定义的方法<br>通过对 Runtime 库函数的直接调用</p>
@@ -434,7 +436,7 @@ return YES;
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">IOS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
         		</li>
       		
 		</ul>
@@ -446,7 +448,7 @@ return YES;
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/IOS//" class="article-tag-list-link color4">IOS</a>
+        			<a href="/categories/iOS//" class="article-tag-list-link color4">iOS</a>
         		</li>
       		
 		</ul>
@@ -676,7 +678,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">IOS</a>
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
               </li>
             
             <div class="clearfix"></div>
